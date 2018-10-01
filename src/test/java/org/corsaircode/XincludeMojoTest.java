@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import java.io.File;
 
-public class MyMojoTest
+public class XincludeMojoTest
 {
     @Rule
     public MojoRule rule = new MojoRule()
@@ -36,16 +36,16 @@ public class MyMojoTest
         assertNotNull( pom );
         assertTrue( pom.exists() );
 
-        MyMojo myMojo = ( MyMojo ) rule.lookupConfiguredMojo( pom, "touch" );
-        assertNotNull( myMojo );
-        myMojo.execute();
+        XincludeMojo xincludeMojo = (XincludeMojo) rule.lookupConfiguredMojo( pom, "touch" );
+        assertNotNull(xincludeMojo);
+        xincludeMojo.execute();
 
-        File outputDirectory = ( File ) rule.getVariableValueFromObject( myMojo, "outputDirectory" );
-        assertNotNull( outputDirectory );
-        assertTrue( outputDirectory.exists() );
-
-        File touch = new File( outputDirectory, "touch.txt" );
-        assertTrue( touch.exists() );
+//        File outputDirectory = ( File ) rule.getVariableValueFromObject( xincludeMojo, "outputDirectory" );
+//        assertNotNull( outputDirectory );
+//        assertTrue( outputDirectory.exists() );
+//
+//        File touch = new File( outputDirectory, "touch.txt" );
+//        assertTrue( touch.exists() );
 
     }
 
