@@ -36,7 +36,7 @@ public class XincludeMojoTest
         assertNotNull( pom );
         assertTrue( pom.exists() );
 
-        XincludeMojo xincludeMojo = (XincludeMojo) rule.lookupConfiguredMojo( pom, "touch" );
+        XincludeMojo xincludeMojo = (XincludeMojo) rule.lookupConfiguredMojo( pom, "xinclude" );
         assertNotNull(xincludeMojo);
         xincludeMojo.execute();
 

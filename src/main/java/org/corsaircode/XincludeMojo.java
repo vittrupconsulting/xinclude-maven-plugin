@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * Goal which touches a timestamp file.
  */
-@Mojo(name = "touch", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
+@Mojo(name = "xinclude", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
 public class XincludeMojo extends AbstractMojo {
     private static final String[] DEFAULT_INCLUDES = new String[]{"**/*.xml"};
 
